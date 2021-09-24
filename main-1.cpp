@@ -50,7 +50,7 @@ int main() {
             for (int p = 0; p < m; p++)
                 for (int i = 0; i < n; i++)
                     for (int j = 0; j < m; j++)
-                        if (matrix[i][j] > matrix[k][p])
+                        if (matrix[i][j] >= matrix[k][p])
                             std::swap (matrix[i][j],matrix[k][p]);
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
