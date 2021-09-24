@@ -21,8 +21,8 @@ using std::endl;
 int main() {
     int n,m,matrix[N][M],min,str,stolb;
 
-    ifstream in ("/Users/maksimsein/CLionProjects/lab-4-3/input.txt");
-    ofstream out ("/Users/maksimsein/CLionProjects/lab-4-3/output.txt");
+    ifstream in ("input.txt");
+    ofstream out ("output.txt");
     in >> n >> m;
 
     for(int i=0; i < n; i++){
