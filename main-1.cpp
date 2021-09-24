@@ -1,3 +1,11 @@
+/*
+Дана последовательность натуральных чисел {aj}j=1...n (n<=10000). 
+Если в последовательности есть хотя бы одно число, сумма цифр 
+которого равна 14, упорядочить последовательность по неубыванию.
+
+Сеин Максим
+
+*/
 #include <iostream>
 #include <fstream>
 using std::cout;
@@ -9,8 +17,8 @@ using std::endl;
 #define M 100
 
 int main() {
-    ifstream in("/Users/maksimsein/CLionProjects/untitled/input.txt");
-    ofstream out("/Users/maksimsein/CLionProjects/untitled/output.txt");
+    ifstream in("input.txt");
+    ofstream out("output.txt");
     int matrix[N][M];
     int n,m;
     int sum, a, b;
