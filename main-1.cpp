@@ -17,12 +17,11 @@ using std::endl;
 #define M 100
 
 int main() {
+    int matrix[N][M], n,m,sum, a, b;
+    bool check;
     ifstream in("input.txt");
     ofstream out("output.txt");
-    int matrix[N][M];
-    int n,m;
-    int sum, a, b;
-    bool check;
+    
     sum=0;
     in >> n >> m;
     for (int i=0; i<n; i++) {
