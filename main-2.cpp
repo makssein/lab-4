@@ -7,7 +7,6 @@
 
 Сеин Максим
 */
-
 #include <iostream>
 #include <fstream>
 
@@ -22,8 +21,8 @@ using std::endl;
 
 int main() {
     int n, m, matrix[N][M], b, a, c, d, maxd, maxa;
-    ifstream in("/Users/maksimsein/CLionProjects/lab-4-2/input.txt");
-    ofstream out("/Users/maksimsein/CLionProjects/lab-4-2/output.txt");
+    ifstream in("input.txt");
+    ofstream out("output.txt");
     in >> n >> m;
     for(int i = 0; i < n; i++){
         for(int j = 0; j < m; j++){
@@ -49,22 +48,18 @@ int main() {
                         if(a > maxa) maxa=a;
                     }
 
-                    if (d < a){
+                    if (d<=a && d!=a) {
                         std::swap(matrix[i][j], matrix[k][p]);
-                    } else if(a > d){
-                        std::swap(matrix[k][p],matrix[i][j]);
                     }
-                    else if (d==a){
-                        if(maxa<=maxd){
-                            std::swap(matrix[i][j], matrix[k][p]);
-                        }
-                        if(maxa>=maxd){
-                            std::swap(matrix[k][p],matrix[i][j]);
-                        }
-                    } else if (matrix[i][j] >= matrix[k][p]) {
+                    else if (d==a && maxa >= maxd) {
+                        std::swap(matrix[i][j], matrix[k][p]);
+                    }
+                    else if (d==a && maxd==maxa && matrix[k][p] <= matrix[i][j]) {
                         std::swap(matrix[k][p], matrix[i][j]);
                     }
                 }
+                maxa=0;
+                maxd=0;
             }
         }
     }
